@@ -18,6 +18,7 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
+app.get('/', (req, res) => res.send('API is running...'));
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/foods', require('./routes/foodRoutes'));
 app.use('/api/orders', require('./routes/orderRoutes'));
